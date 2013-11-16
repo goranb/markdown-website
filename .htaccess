@@ -1,0 +1,4 @@
+# Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /markdown/
+RewriteRule ^(.+)\.html$ index.php?$1 [NC]
