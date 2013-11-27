@@ -8,6 +8,7 @@
 	$cache_dir = 'cached'; // cache directory
 	$log_file = 'cached/log.log';
 	$template = 'template.php';
+	$base_url = '/markdown/';
 
 	$extensions = array( 
 		'md', 

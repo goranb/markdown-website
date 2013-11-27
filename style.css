@@ -4,14 +4,21 @@ html {
 }
 
 body {
-	background-color: #fff;
-	color: #555;
+	overflow-y: scroll;
 	margin: 8%;
-	padding: 5%;
 	font-family: helvetica, Arial, sans-serif;
 	line-height: 1.5em;
-	box-shadow: 0 0 3em rgba(0,0,0,0.25);
+	color: #555;
 }
+
+#content {
+	background-color: #fff;
+	padding: 5%;
+	box-shadow: 0 0 2em rgba(192,192,192,0.55);
+	position: relative;
+}
+
+
 
 h1, h2, h3, h4, h5 {
 	margin: 0;
@@ -53,3 +60,79 @@ ul > li > p {
 ul ul {
 	list-style: disc;
 }
+
+
+/* MENU */
+#menu {
+	position: relative;
+}
+
+#menu > ul {
+	float: right;
+}
+
+#menu:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#menu ul {
+	padding: 0;
+	margin: 0;
+}
+
+#menu ul:after {
+	content: 'a';
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+#menu ul ul {
+	position: absolute;
+	display: none;
+	list-style: none;
+	z-index: 100;
+}
+
+#menu li:hover > ul {
+	display: block;
+}
+
+#menu li {
+	position: relative;
+}
+
+#menu > ul > li {
+	float: left;
+}
+
+#menu > ul > li + li {
+	margin-left: 1px;
+}
+#menu ul ul li + li{
+	border-top: 1px solid #999;
+}
+
+#menu a {
+	color: #000;
+	text-decoration: none;
+	display: block;
+	background-color: rgba(192,192,192,0.9);
+	padding: 0.6em 2em;
+}
+
+#menu a:hover {
+	color: #fff;
+}
+#menu a.dir:hover {
+	color: #000;
+}
+
+#menu a.dir:after {
+	-content: '/';
+}
+
