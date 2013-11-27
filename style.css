@@ -9,7 +9,8 @@ body {
 	margin: 0;
 	padding: 8%;
 	font-family: helvetica, Arial, sans-serif;
-	line-height: 1.5em;
+	font-size: 16px;
+	line-height: 1.6em;
 	color: #555;
 	background-image: repeating-linear-gradient(135deg, #888, #888 5px, #999 5px, #999 10px);
 	background-image: url(images/background.jpg);
@@ -38,6 +39,24 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	margin-bottom: 1em;
+	font-size: 1.8em;
+	line-height: 1.6em;
+}
+h2 {
+	font-size: 1.4em;
+	line-height: 1.6em;
+}
+h3 {
+	font-size: 1.3em;
+	line-height: 1.6em;
+}
+h4 {
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+h5 {
+	font-size: 1.1em;
+	line-height: 1.6em;
 }
 
 h1:before {
@@ -56,22 +75,6 @@ h2, h3, h4, h5 {
 	margin-top: 1em;
 }
 
-
-
-ul {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 3em;
-	margin: 0 0 1em;
-}
-
-ul > li > p {
-	margin: 0.5em 0 0;
-}
-
-ul ul {
-	list-style: disc;
-}
 
 #footer {
 	text-align: center;
@@ -98,6 +101,9 @@ ul ul {
 #menu ul {
 	padding: 0;
 	margin: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 #menu ul:after {
@@ -136,16 +142,17 @@ ul ul {
 }
 
 #menu a {
-	color: #fff;
+	color: #ddd;
 	text-decoration: none;
 	display: block;
-	background-color: rgba(0,0,0,0.5);
-	padding: 0.6em 2em;
+	background-color: rgba(0,0,0,0.75);
+	padding: 0.5em 1em;
 	outline: none;
 }
 
 #menu a:hover {
-	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	background-color: rgba(0,0,0,0.95);
 }
 #menu a.dir:hover {
 	-color: #000;
