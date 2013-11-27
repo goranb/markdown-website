@@ -1,20 +1,32 @@
 
 html {
-	background-color: #999;
+	background-color: #000;
+	height: 100%;
 }
 
 body {
 	overflow-y: scroll;
-	margin: 8%;
+	margin: 0;
+	padding: 8%;
 	font-family: helvetica, Arial, sans-serif;
 	line-height: 1.5em;
 	color: #555;
+	background-image: repeating-linear-gradient(135deg, #888, #888 5px, #999 5px, #999 10px);
+	background-image: url(images/background.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #content {
 	background-color: #fff;
 	padding: 5%;
-	box-shadow: 0 0 2em rgba(192,192,192,0.55);
+	box-shadow: 0 0 1.5em rgba(0,0,0,0.1);
 	position: relative;
 }
 
@@ -61,6 +73,12 @@ ul ul {
 	list-style: disc;
 }
 
+#footer {
+	text-align: center;
+	font-size: 0.85em;
+	color: #fff;
+}
+
 
 /* MENU */
 #menu {
@@ -83,7 +101,7 @@ ul ul {
 }
 
 #menu ul:after {
-	content: 'a';
+	content: '';
 	display: block;
 	clear: both;
 	width: 0;
@@ -111,25 +129,27 @@ ul ul {
 }
 
 #menu > ul > li + li {
-	margin-left: 1px;
+	-margin-left: 1px;
 }
 #menu ul ul li + li{
-	border-top: 1px solid #999;
+	-border-top: 1px solid #999;
 }
 
 #menu a {
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 	display: block;
-	background-color: rgba(192,192,192,0.9);
+	background-color: rgba(0,0,0,0.5);
 	padding: 0.6em 2em;
+	outline: none;
 }
 
 #menu a:hover {
-	color: #fff;
+	background-color: rgba(0,0,0,0.8);
 }
 #menu a.dir:hover {
-	color: #000;
+	-color: #000;
+	-background-color: transparent;
 }
 
 #menu a.dir:after {

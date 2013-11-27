@@ -36,5 +36,6 @@
 ?>	
 </div>
 <div id="content"><?=$content;?></div>
+<div id="footer">powered by <strong>markdown website</strong></div>
 </body>
 </html>
