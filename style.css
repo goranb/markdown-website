@@ -89,7 +89,7 @@ h2, h3, h4, h5 {
 }
 
 #menu > ul {
-	float: right;
+	-float: right;
 }
 
 #menu:after {
@@ -118,8 +118,13 @@ h2, h3, h4, h5 {
 #menu ul ul {
 	position: absolute;
 	display: none;
-	list-style: none;
+	width: 16em;
 	z-index: 100;
+}
+
+#menu ul ul ul {
+	left: 100%;
+	top: 0;
 }
 
 #menu li:hover > ul {

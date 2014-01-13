@@ -10,15 +10,38 @@
 <div id="menu">
 <?php
 
-	//$dir = __DIR__;
+	$menu = array(
+		'Naslovnica' => 'index.html',
+		'CV' => 'CV.html',
+		'submenu' => array(
+			'page1' => 'test/test.html',
+			'page2' => 'test/index.html',
+			),
+		);
 
-	$dir = '.';
+	function menu($array){
+		$out = array();
+		foreach($array as $key => $content){
+			if (is_array($content)){
+				$out[] = '<li><a>'.$key.'</a>'.menu($content).'</li>';
+			} else {
+				$out[] = '<li><a href="'.$content.'">'.$key.'</a></li>';
+			}
+		}
+		return $out ? '<ul>'.join($out).'</ul>' : '';
+	}
 
-	function scan($dir){
+	echo menu($menu);
+
+	/*
+	function scan($dir = '.'){
+		$skip = array(
+			'README.md',
+			);
 		if (count($scan = scandir($dir))) ;//return;
 		$out = array();
 		foreach($scan as $file){
-			if (in_array($extension = pathinfo($file, PATHINFO_EXTENSION), $GLOBALS['extensions']) AND is_file($dir.'/'.$file)){
+			if (in_array($extension = pathinfo($file, PATHINFO_EXTENSION), $GLOBALS['extensions']) && is_file($dir.'/'.$file) && !in_array($file, $skip)){
 				$filename = pathinfo($file, PATHINFO_FILENAME);
 				$out[] = '<li><a href="'.$dir.'/'.$filename.'.html">'.$filename.'</a></li>';
 			} else if (is_dir($path = $dir.'/'.$file)){
@@ -31,7 +54,8 @@
 		return $out ? '<ul>'.join($out).'</ul>' : '';
 	}
 
-	echo scan($dir);
+	echo scan();
+	*/
 	
 ?>	
 </div>
